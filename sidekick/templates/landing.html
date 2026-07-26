@@ -188,7 +188,7 @@
       border-bottom: 1px solid var(--line);
     }
 
-    nav > div:last-child {
+    nav>div:last-child {
       justify-self: end;
     }
 
@@ -270,20 +270,29 @@
       transition: background .2s ease;
     }
 
-    .nav-hamburger:hover { background: var(--accent-soft); }
-    .nav-hamburger svg { width: 18px; height: 18px; }
+    .nav-hamburger:hover {
+      background: var(--accent-soft);
+    }
+
+    .nav-hamburger svg {
+      width: 18px;
+      height: 18px;
+    }
 
     .mobile-nav-backdrop {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.4);
+      background: rgba(0, 0, 0, .4);
       z-index: 250;
       opacity: 0;
       transition: opacity .3s ease;
     }
 
-    .mobile-nav-backdrop.open { display: block; opacity: 1; }
+    .mobile-nav-backdrop.open {
+      display: block;
+      opacity: 1;
+    }
 
     .mobile-nav {
       position: fixed;
@@ -298,11 +307,13 @@
       flex-direction: column;
       gap: 4px;
       padding: 90px 24px 24px;
-      transition: left .35s cubic-bezier(.16,1,.3,1);
-      box-shadow: 8px 0 30px rgba(0,0,0,.12);
+      transition: left .35s cubic-bezier(.16, 1, .3, 1);
+      box-shadow: 8px 0 30px rgba(0, 0, 0, .12);
     }
 
-    .mobile-nav.open { left: 0; }
+    .mobile-nav.open {
+      left: 0;
+    }
 
     .mobile-nav a {
       text-decoration: none;
@@ -314,12 +325,22 @@
       transition: color .2s ease;
     }
 
-    .mobile-nav a:hover { color: var(--accent); }
+    .mobile-nav a:hover {
+      color: var(--accent);
+    }
 
     @media (max-width: 760px) {
-      .navlinks { display: none; }
-      .nav-hamburger { display: flex; }
-      nav { grid-template-columns: auto 1fr auto; }
+      .navlinks {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      nav {
+        grid-template-columns: auto 1fr auto;
+      }
     }
 
     .navcta {
@@ -546,7 +567,7 @@
       gap: 6px;
     }
 
-/* ---------- redesigned pipeline ---------- */
+    /* ---------- redesigned pipeline ---------- */
     .diagram-wrap {
       max-width: 1080px;
       margin: 70px auto 0;
@@ -608,16 +629,49 @@
       animation: chromeDotSequence 3.6s ease-in-out infinite;
     }
 
-    .diagram-chrome .cdot:nth-child(1) { animation-delay: 0s;   --dot-color: #f0652a; --dot-glow: rgba(240,101,42,.65); }
-    .diagram-chrome .cdot:nth-child(2) { animation-delay: .4s;  --dot-color: #ef4b7a; --dot-glow: rgba(239,75,122,.65); }
-    .diagram-chrome .cdot:nth-child(3) { animation-delay: .8s;  --dot-color: #7c5cff; --dot-glow: rgba(124,92,255,.65); }
+    .diagram-chrome .cdot:nth-child(1) {
+      animation-delay: 0s;
+      --dot-color: #f0652a;
+      --dot-glow: rgba(240, 101, 42, .65);
+    }
+
+    .diagram-chrome .cdot:nth-child(2) {
+      animation-delay: .4s;
+      --dot-color: #ef4b7a;
+      --dot-glow: rgba(239, 75, 122, .65);
+    }
+
+    .diagram-chrome .cdot:nth-child(3) {
+      animation-delay: .8s;
+      --dot-color: #7c5cff;
+      --dot-glow: rgba(124, 92, 255, .65);
+    }
 
     @keyframes chromeDotSequence {
-      0%   { background: var(--line); box-shadow: none; }
-      8%   { background: var(--dot-color); box-shadow: 0 0 8px 1px var(--dot-glow); }
-      40%  { background: var(--dot-color); box-shadow: 0 0 8px 1px var(--dot-glow); }
-      55%  { background: var(--line); box-shadow: none; }
-      100% { background: var(--line); box-shadow: none; }
+      0% {
+        background: var(--line);
+        box-shadow: none;
+      }
+
+      8% {
+        background: var(--dot-color);
+        box-shadow: 0 0 8px 1px var(--dot-glow);
+      }
+
+      40% {
+        background: var(--dot-color);
+        box-shadow: 0 0 8px 1px var(--dot-glow);
+      }
+
+      55% {
+        background: var(--line);
+        box-shadow: none;
+      }
+
+      100% {
+        background: var(--line);
+        box-shadow: none;
+      }
     }
 
     .diagram-chrome .curl {
@@ -857,7 +911,7 @@
       }
     }
 
-        /* ---------- feature cards (bento) ---------- */
+    /* ---------- feature cards (bento) ---------- */
     .features {
       max-width: 1080px;
       margin: 120px auto 0;
@@ -908,16 +962,41 @@
 
 
     /* bento layout */
-    .fcard:nth-child(1) { grid-column: span 2; }
-    .fcard:nth-child(2) { grid-column: span 1; }
-    .fcard:nth-child(3) { grid-column: span 1; grid-row: span 2; justify-content: center; }
-    .fcard:nth-child(4) { grid-column: span 1; }
-    .fcard:nth-child(5) { grid-column: span 1; }
-    .fcard:nth-child(6) { grid-column: span 2; }
+    .fcard:nth-child(1) {
+      grid-column: span 2;
+    }
+
+    .fcard:nth-child(2) {
+      grid-column: span 1;
+    }
+
+    .fcard:nth-child(3) {
+      grid-column: span 1;
+      grid-row: span 2;
+      justify-content: center;
+    }
+
+    .fcard:nth-child(4) {
+      grid-column: span 1;
+    }
+
+    .fcard:nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .fcard:nth-child(6) {
+      grid-column: span 2;
+    }
 
     @media (max-width: 820px) {
-      .fgrid { grid-template-columns: 1fr; }
-      .fcard:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .fgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .fcard:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
     }
 
     .fcard {
@@ -948,18 +1027,44 @@
       transition: opacity .35s ease, transform .35s ease;
     }
 
-    .fcard:hover .glow { opacity: 1; transform: scale(1.15); }
+    .fcard:hover .glow {
+      opacity: 1;
+      transform: scale(1.15);
+    }
 
-    .fcard:has(.ico.c-orange) { --card-color: #f0652a; --card-glow: rgba(240,101,42,.3); }
-    .fcard:has(.ico.c-teal)   { --card-color: #0ea89a; --card-glow: rgba(14,168,154,.3); }
-    .fcard:has(.ico.c-violet) { --card-color: #7c5cff; --card-glow: rgba(124,92,255,.3); }
-    .fcard:has(.ico.c-blue)   { --card-color: #2563eb; --card-glow: rgba(37,99,235,.3); }
-    .fcard:has(.ico.c-rose)   { --card-color: #ef4b7a; --card-glow: rgba(239,75,122,.3); }
-    .fcard:has(.ico.c-amber)  { --card-color: #d97706; --card-glow: rgba(217,119,6,.3); }
+    .fcard:has(.ico.c-orange) {
+      --card-color: #f0652a;
+      --card-glow: rgba(240, 101, 42, .3);
+    }
+
+    .fcard:has(.ico.c-teal) {
+      --card-color: #0ea89a;
+      --card-glow: rgba(14, 168, 154, .3);
+    }
+
+    .fcard:has(.ico.c-violet) {
+      --card-color: #7c5cff;
+      --card-glow: rgba(124, 92, 255, .3);
+    }
+
+    .fcard:has(.ico.c-blue) {
+      --card-color: #2563eb;
+      --card-glow: rgba(37, 99, 235, .3);
+    }
+
+    .fcard:has(.ico.c-rose) {
+      --card-color: #ef4b7a;
+      --card-glow: rgba(239, 75, 122, .3);
+    }
+
+    .fcard:has(.ico.c-amber) {
+      --card-color: #d97706;
+      --card-glow: rgba(217, 119, 6, .3);
+    }
 
     .fcard:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 50px rgba(23, 19, 16, 0.08), 0 0 40px var(--card-glow, rgba(184,188,247,.3));
+      box-shadow: 0 24px 50px rgba(23, 19, 16, 0.08), 0 0 40px var(--card-glow, rgba(184, 188, 247, .3));
       border-color: var(--card-color, #c8bcf7);
     }
 
@@ -1009,20 +1114,81 @@
     }
 
     /* colored gradient backgrounds per icon */
-    .fcard .ico.c-orange { background: linear-gradient(135deg,#fff4ee 0%,var(--accent-soft) 100%); color:var(--accent-deep); border:1px solid #e8ddd6; --ico-color:#f0652a; --ico-shadow:rgba(240,101,42,.2); }
-    .fcard .ico.c-teal   { background: linear-gradient(135deg,#f0fdf9 0%,var(--teal-soft) 100%);   color:#0ea89a;           border:1px solid #b8e8e2; --ico-color:#0ea89a; --ico-shadow:rgba(14,168,154,.2); }
-    .fcard .ico.c-violet { background: linear-gradient(135deg,#f7f4ff 0%,var(--violet-soft) 100%); color:#7c5cff;           border:1px solid #c8bcf7; --ico-color:#7c5cff; --ico-shadow:rgba(124,92,255,.2); }
-    .fcard .ico.c-blue   { background: linear-gradient(135deg,#f0f5ff 0%,var(--blue-soft) 100%);   color:#2563eb;           border:1px solid #b8ccf8; --ico-color:#2563eb; --ico-shadow:rgba(37,99,235,.2); }
-    .fcard .ico.c-rose   { background: linear-gradient(135deg,#fff6f8 0%,var(--rose-soft) 100%);   color:#ef4b7a;           border:1px solid #f3b8cc; --ico-color:#ef4b7a; --ico-shadow:rgba(239,75,122,.2); }
-    .fcard .ico.c-amber  { background: linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);            color:#d97706;           border:1px solid #fde68a; --ico-color:#d97706; --ico-shadow:rgba(217,119,6,.2); }
+    .fcard .ico.c-orange {
+      background: linear-gradient(135deg, #fff4ee 0%, var(--accent-soft) 100%);
+      color: var(--accent-deep);
+      border: 1px solid #e8ddd6;
+      --ico-color: #f0652a;
+      --ico-shadow: rgba(240, 101, 42, .2);
+    }
 
-    .fcard:hover .ico.anim-bolt   { transform: rotate(-8deg) scale(1.12) }
-    .fcard:hover .ico.anim-spin   { transform: rotate(180deg) scale(1.1) }
-    .fcard:hover .ico.anim-bounce { transform: translateY(-6px) scale(1.1) }
-    .fcard:hover .ico.anim-tilt   { transform: rotate(8deg) scale(1.1) }
-    .fcard:hover .ico.anim-link   { transform: scaleX(1.15) scale(1.08) }
-    .fcard:hover .ico.anim-flash  { transform: scale(1.18) }
-    .fcard:hover .ico { box-shadow: 0 8px 24px -2px var(--ico-shadow, rgba(23,19,16,.18)) }
+    .fcard .ico.c-teal {
+      background: linear-gradient(135deg, #f0fdf9 0%, var(--teal-soft) 100%);
+      color: #0ea89a;
+      border: 1px solid #b8e8e2;
+      --ico-color: #0ea89a;
+      --ico-shadow: rgba(14, 168, 154, .2);
+    }
+
+    .fcard .ico.c-violet {
+      background: linear-gradient(135deg, #f7f4ff 0%, var(--violet-soft) 100%);
+      color: #7c5cff;
+      border: 1px solid #c8bcf7;
+      --ico-color: #7c5cff;
+      --ico-shadow: rgba(124, 92, 255, .2);
+    }
+
+    .fcard .ico.c-blue {
+      background: linear-gradient(135deg, #f0f5ff 0%, var(--blue-soft) 100%);
+      color: #2563eb;
+      border: 1px solid #b8ccf8;
+      --ico-color: #2563eb;
+      --ico-shadow: rgba(37, 99, 235, .2);
+    }
+
+    .fcard .ico.c-rose {
+      background: linear-gradient(135deg, #fff6f8 0%, var(--rose-soft) 100%);
+      color: #ef4b7a;
+      border: 1px solid #f3b8cc;
+      --ico-color: #ef4b7a;
+      --ico-shadow: rgba(239, 75, 122, .2);
+    }
+
+    .fcard .ico.c-amber {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      color: #d97706;
+      border: 1px solid #fde68a;
+      --ico-color: #d97706;
+      --ico-shadow: rgba(217, 119, 6, .2);
+    }
+
+    .fcard:hover .ico.anim-bolt {
+      transform: rotate(-8deg) scale(1.12)
+    }
+
+    .fcard:hover .ico.anim-spin {
+      transform: rotate(180deg) scale(1.1)
+    }
+
+    .fcard:hover .ico.anim-bounce {
+      transform: translateY(-6px) scale(1.1)
+    }
+
+    .fcard:hover .ico.anim-tilt {
+      transform: rotate(8deg) scale(1.1)
+    }
+
+    .fcard:hover .ico.anim-link {
+      transform: scaleX(1.15) scale(1.08)
+    }
+
+    .fcard:hover .ico.anim-flash {
+      transform: scale(1.18)
+    }
+
+    .fcard:hover .ico {
+      box-shadow: 0 8px 24px -2px var(--ico-shadow, rgba(23, 19, 16, .18))
+    }
 
     .fcard h3 {
       font-family: 'Space Grotesk', sans-serif;
@@ -1047,9 +1213,14 @@
     }
 
     @media (max-width: 820px) {
-      .fgrid { grid-template-columns: 1fr; }
-      .fcard:nth-child(n) { grid-column: span 1; }
+      .fgrid {
+        grid-template-columns: 1fr;
       }
+
+      .fcard:nth-child(n) {
+        grid-column: span 1;
+      }
+    }
 
     /* ---------- comparison ---------- */
     .compare {
@@ -1258,10 +1429,21 @@
       transform: translateX(5px);
     }
 
-    .cbox:hover li:nth-child(1) { transition-delay: 0s; }
-    .cbox:hover li:nth-child(2) { transition-delay: .05s; }
-    .cbox:hover li:nth-child(3) { transition-delay: .10s; }
-    .cbox:hover li:nth-child(4) { transition-delay: .15s; }
+    .cbox:hover li:nth-child(1) {
+      transition-delay: 0s;
+    }
+
+    .cbox:hover li:nth-child(2) {
+      transition-delay: .05s;
+    }
+
+    .cbox:hover li:nth-child(3) {
+      transition-delay: .10s;
+    }
+
+    .cbox:hover li:nth-child(4) {
+      transition-delay: .15s;
+    }
 
     .cbox.good li {
       border-top: 1px solid rgba(255, 255, 255, .06);
@@ -1317,7 +1499,9 @@
     }
 
     @media (max-width: 700px) {
-      .cgrid { grid-template-columns: 1fr; }
+      .cgrid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ---------- timeline ---------- */
@@ -1507,7 +1691,7 @@
       grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
       gap: 0;
-      transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease;
+      transition: transform .35s cubic-bezier(.16, 1, .3, 1), box-shadow .35s ease;
     }
 
     .closing-box:hover {
@@ -1877,6 +2061,7 @@
       z-index: 1;
       position: relative;
     }
+
     .fcard-visual {
       margin-top: 20px;
       display: flex;
@@ -1885,6 +2070,7 @@
       z-index: 1;
       position: relative;
     }
+
     .fv-trace {
       display: flex;
       align-items: center;
@@ -1893,17 +2079,39 @@
       font-weight: 500;
       color: var(--ink-faint);
     }
-    .fv-label { width: 130px; flex-shrink: 0; font-family: Consolas, monospace; font-size: 10.5px; }
+
+    .fv-label {
+      width: 130px;
+      flex-shrink: 0;
+      font-family: Consolas, monospace;
+      font-size: 10.5px;
+    }
+
     .fv-bar {
       height: 5px;
       border-radius: 10px;
       flex: 1;
       opacity: .7;
     }
-    .fv-bar.c-rose   { background: var(--rose); }
-    .fv-bar.c-orange { background: var(--accent); }
-    .fv-bar.c-teal   { background: var(--teal); }
-    .fv-val { width: 50px; text-align: right; flex-shrink: 0; }
+
+    .fv-bar.c-rose {
+      background: var(--rose);
+    }
+
+    .fv-bar.c-orange {
+      background: var(--accent);
+    }
+
+    .fv-bar.c-teal {
+      background: var(--teal);
+    }
+
+    .fv-val {
+      width: 50px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
     .fcard-chat {
       margin-top: 20px;
       display: flex;
@@ -1912,6 +2120,7 @@
       z-index: 1;
       position: relative;
     }
+
     .fvc-bubble {
       font-size: 12px;
       padding: 9px 13px;
@@ -1919,12 +2128,14 @@
       line-height: 1.5;
       max-width: 90%;
     }
+
     .fvc-bubble.user {
       background: var(--accent);
       color: #fff;
       align-self: flex-end;
       border-bottom-right-radius: 4px;
     }
+
     .fvc-bubble.bot {
       background: var(--accent-soft);
       border: 1px solid var(--line);
@@ -1932,18 +2143,20 @@
       align-self: flex-start;
       border-bottom-left-radius: 4px;
     }
+
     .fvc-tool {
       display: inline-block;
       font-size: 10px;
       font-weight: 700;
       color: var(--violet);
       background: var(--violet-soft);
-      border: 1px solid rgba(124,92,255,.2);
+      border: 1px solid rgba(124, 92, 255, .2);
       padding: 2px 7px;
       border-radius: 10px;
       margin-bottom: 4px;
       margin-right: 4px;
     }
+
     .fcard-pills {
       margin-top: 20px;
       display: flex;
@@ -1952,37 +2165,85 @@
       z-index: 1;
       position: relative;
     }
+
     .fvp {
       font-size: 11.5px;
       font-weight: 600;
       padding: 5px 12px;
       border-radius: 20px;
     }
-    .fvp.c-violet { background: var(--violet-soft); color: var(--violet); border: 1px solid rgba(124,92,255,.2); }
-    .fvp.c-teal   { background: var(--teal-soft);   color: var(--teal);   border: 1px solid rgba(14,168,154,.2); }
-    .fvp.c-blue   { background: var(--blue-soft);   color: var(--blue);   border: 1px solid rgba(58,123,253,.2); }
-    .fvp.c-rose   { background: var(--rose-soft);   color: var(--rose);   border: 1px solid rgba(239,75,122,.2); }
+
+    .fvp.c-violet {
+      background: var(--violet-soft);
+      color: var(--violet);
+      border: 1px solid rgba(124, 92, 255, .2);
+    }
+
+    .fvp.c-teal {
+      background: var(--teal-soft);
+      color: var(--teal);
+      border: 1px solid rgba(14, 168, 154, .2);
+    }
+
+    .fvp.c-blue {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid rgba(58, 123, 253, .2);
+    }
+
+    .fvp.c-rose {
+      background: var(--rose-soft);
+      color: var(--rose);
+      border: 1px solid rgba(239, 75, 122, .2);
+    }
 
     /* dark mode for bento internals */
-    [data-theme="dark"] .fvc-bubble.bot { background: #1e293b; border-color: #222d3d; }
-    [data-theme="dark"] .fv-bar { opacity: .5; }
+    [data-theme="dark"] .fvc-bubble.bot {
+      background: #1e293b;
+      border-color: #222d3d;
+    }
+
+    [data-theme="dark"] .fv-bar {
+      opacity: .5;
+    }
 
 
     /* ---------- MCP diagram (card 5) ---------- */
 
-    .mcp-arrow svg { width: 100%; height: 12px; }
-
-    @keyframes mcpSlide {
-      0%   { opacity: 0; transform: translateX(-6px); }
-      20%  { opacity: 1; transform: translateX(0); }
-      70%  { opacity: 1; transform: translateX(0); }
-      90%  { opacity: 0; transform: translateX(6px); }
-      100% { opacity: 0; transform: translateX(6px); }
+    .mcp-arrow svg {
+      width: 100%;
+      height: 12px;
     }
 
-    [data-theme="dark"]
+    @keyframes mcpSlide {
+      0% {
+        opacity: 0;
+        transform: translateX(-6px);
+      }
 
-    [data-theme="dark"]
+      20% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      70% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      90% {
+        opacity: 0;
+        transform: translateX(6px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(6px);
+      }
+    }
+
+    [data-theme="dark"] [data-theme="dark"]
+
     /* ---------- anchor scroll offset ---------- */
     #diagram,
     #features,
@@ -2115,16 +2376,39 @@
       background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.12), transparent 70%);
     }
 
-    [data-theme="dark"] .fcard:has(.ico.c-orange) { --card-color: #ffaa75; --card-glow: rgba(251,146,60,.3); }
-    [data-theme="dark"] .fcard:has(.ico.c-teal)   { --card-color: #5eead4; --card-glow: rgba(45,212,191,.3); }
-    [data-theme="dark"] .fcard:has(.ico.c-violet) { --card-color: #c4b5fd; --card-glow: rgba(167,139,250,.3); }
-    [data-theme="dark"] .fcard:has(.ico.c-blue)   { --card-color: #60a5fa; --card-glow: rgba(96,165,250,.3); }
-    [data-theme="dark"] .fcard:has(.ico.c-rose)   { --card-color: #fca5a5; --card-glow: rgba(251,113,133,.3); }
-    [data-theme="dark"] .fcard:has(.ico.c-amber)  { --card-color: #fde047; --card-glow: rgba(251,191,36,.3); }
+    [data-theme="dark"] .fcard:has(.ico.c-orange) {
+      --card-color: #ffaa75;
+      --card-glow: rgba(251, 146, 60, .3);
+    }
+
+    [data-theme="dark"] .fcard:has(.ico.c-teal) {
+      --card-color: #5eead4;
+      --card-glow: rgba(45, 212, 191, .3);
+    }
+
+    [data-theme="dark"] .fcard:has(.ico.c-violet) {
+      --card-color: #c4b5fd;
+      --card-glow: rgba(167, 139, 250, .3);
+    }
+
+    [data-theme="dark"] .fcard:has(.ico.c-blue) {
+      --card-color: #60a5fa;
+      --card-glow: rgba(96, 165, 250, .3);
+    }
+
+    [data-theme="dark"] .fcard:has(.ico.c-rose) {
+      --card-color: #fca5a5;
+      --card-glow: rgba(251, 113, 133, .3);
+    }
+
+    [data-theme="dark"] .fcard:has(.ico.c-amber) {
+      --card-color: #fde047;
+      --card-glow: rgba(251, 191, 36, .3);
+    }
 
     [data-theme="dark"] .fcard:hover {
       border-color: var(--card-color, #3b82f6);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 40px var(--card-glow, rgba(59,130,246,.25));
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 40px var(--card-glow, rgba(59, 130, 246, .25));
     }
 
     [data-theme="dark"] .fcard h3 {
@@ -2356,8 +2640,9 @@
   <nav>
     <div class="brand">
       <button id="navHamburger" class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 6h18M3 12h18M3 18h18"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 6h18M3 12h18M3 18h18" />
         </svg>
       </button>
       <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2370,7 +2655,7 @@
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
-      <a href="https://github.com" target="_blank">GitHub ↗</a>
+      <a href="https://github.com/mauryasagar/ouroboros-ai" target="_blank">GitHub ↗</a>
     </div>
     <div style="display:flex;align-items:center;gap:14px">
       <button id="themeToggle" aria-label="Toggle theme">
@@ -2396,7 +2681,7 @@
     <a href="#features" onclick="closeMobileNav()">Features</a>
     <a href="#how" onclick="closeMobileNav()">How it works</a>
     <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-    <a href="https://github.com" target="_blank" onclick="closeMobileNav()">GitHub ↗</a>
+    <a href="https://github.com/mauryasagar/ouroboros-ai" target="_blank" onclick="closeMobileNav()">GitHub ↗</a>
   </div>
 
   <div class="hero">
@@ -2412,8 +2697,8 @@
     <div class="hero-note r r4">⌘ OpenTelemetry → SigNoz MCP → Groq — every answer traces back to a real span</div>
   </div>
 
-      </div>
-    </div>
+  </div>
+  </div>
   </div>
 
   <!-- ========== REDESIGNED PIPELINE ========== -->
@@ -2455,7 +2740,9 @@
             </div>
             <div class="inc-content">
               <div class="inc-title">Context overload detected</div>
-              <div class="inc-desc"><code style="color:var(--orange);background:var(--orange-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">chaos.detect</code> flags the agent's token budget exceeded on turn 14.</div>
+              <div class="inc-desc"><code
+                  style="color:var(--orange);background:var(--orange-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">chaos.detect</code>
+                flags the agent's token budget exceeded on turn 14.</div>
             </div>
           </div>
           <div class="inc-item" style="--d:0.2">
@@ -2466,7 +2753,9 @@
             </div>
             <div class="inc-content">
               <div class="inc-title">Span exported to SigNoz</div>
-              <div class="inc-desc"><code style="color:var(--teal);background:var(--teal-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">otel.export</code> ships the full trace before the failure even resolves.</div>
+              <div class="inc-desc"><code
+                  style="color:var(--teal);background:var(--teal-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">otel.export</code>
+                ships the full trace before the failure even resolves.</div>
             </div>
           </div>
           <div class="inc-item" style="--d:0.35">
@@ -2477,7 +2766,9 @@
             </div>
             <div class="inc-content">
               <div class="inc-title">Alert fired</div>
-              <div class="inc-desc"><code style="color:var(--rose);background:var(--rose-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">signoz.alert</code> matches the failure pattern and calls the healer webhook.</div>
+              <div class="inc-desc"><code
+                  style="color:var(--rose);background:var(--rose-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">signoz.alert</code>
+                matches the failure pattern and calls the healer webhook.</div>
             </div>
           </div>
           <div class="inc-item" style="--d:0.5">
@@ -2488,7 +2779,9 @@
             </div>
             <div class="inc-content">
               <div class="inc-title">Auto-healer retries</div>
-              <div class="inc-desc"><code style="color:var(--blue);background:var(--blue-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">webhook.heal</code> reruns the call with optimized parameters. No human paged.</div>
+              <div class="inc-desc"><code
+                  style="color:var(--blue);background:var(--blue-soft);padding:1px 5px;border-radius:4px;font-size:12.5px;">webhook.heal</code>
+                reruns the call with optimized parameters. No human paged.</div>
             </div>
           </div>
           <div class="inc-item" style="--d:0.65">
@@ -2510,11 +2803,30 @@
   <!-- marquee -->
   <div class="marquee-wrap">
     <div class="marquee-group" id="marqueeGroup">
-        <div class="marquee-chip c-orange"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>Groq LPU Inference</div>
-        <div class="marquee-chip c-teal"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>OpenTelemetry Traces</div>
-        <div class="marquee-chip c-violet"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/></svg></span>SigNoz MCP Server</div>
-        <div class="marquee-chip c-blue"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 12a5.5 5.5 0 1 1-5.5-5.5"/><path d="M17.5 12 15 9.5M17.5 12 15 14.5"/></svg></span>Self-Healing Webhooks</div>
-        <div class="marquee-chip c-rose"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-4"/></svg></span>Real-Time Cost Tracking</div>
+      <div class="marquee-chip c-orange"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
+          </svg></span>Groq LPU Inference</div>
+      <div class="marquee-chip c-teal"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 3" />
+          </svg></span>OpenTelemetry Traces</div>
+      <div class="marquee-chip c-violet"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z" />
+          </svg></span>SigNoz MCP Server</div>
+      <div class="marquee-chip c-blue"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 12a5.5 5.5 0 1 1-5.5-5.5" />
+            <path d="M17.5 12 15 9.5M17.5 12 15 14.5" />
+          </svg></span>Self-Healing Webhooks</div>
+      <div class="marquee-chip c-rose"><span class="ico-circle"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18" />
+            <path d="M18 17V9M13 17V5M8 17v-4" />
+          </svg></span>Real-Time Cost Tracking</div>
     </div>
   </div>
 
@@ -2529,56 +2841,66 @@
       <div class="fcard fx">
         <div class="glow"></div>
         <div class="ico c-orange anim-bolt">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor" fill-opacity=".12"/>
-            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor" fill-opacity=".12" />
+            <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" />
           </svg>
         </div>
         <div class="fcard-header">
           <div class="fcard-tag">01 / SIMULATION</div>
           <h3>Chaos &amp; cost tracking</h3>
-          <p>A simulated AI agent runs continuously, occasionally hitting context-overload errors — with real token and cost attributes sent straight to SigNoz.</p>
+          <p>A simulated AI agent runs continuously, occasionally hitting context-overload errors — with real token and
+            cost attributes sent straight to SigNoz.</p>
         </div>
       </div>
       <div class="fcard fx" style="transition-delay:.08s">
         <div class="glow"></div>
         <div class="ico c-teal anim-spin">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 2.1 21 6l-4 3.9M3 12v-1a4 4 0 0 1 4-4h14"/>
-            <path d="M7 21.9 3 18l4-3.9M21 12v1a4 4 0 0 1-4 4H3"/>
-            <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M17 2.1 21 6l-4 3.9M3 12v-1a4 4 0 0 1 4-4h14" />
+            <path d="M7 21.9 3 18l4-3.9M21 12v1a4 4 0 0 1-4 4H3" />
+            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
           </svg>
         </div>
         <div class="fcard-header">
           <div class="fcard-tag">02 / AUTONOMOUS</div>
           <h3>Self-healing loop</h3>
-          <p>A SigNoz alert fires a webhook the instant a failure pattern appears. The auto-healer retries with optimized parameters — no human involved.</p>
+          <p>A SigNoz alert fires a webhook the instant a failure pattern appears. The auto-healer retries with
+            optimized parameters — no human involved.</p>
         </div>
       </div>
       <div class="fcard fx" style="transition-delay:.16s">
         <div class="glow"></div>
         <div class="ico c-violet anim-bounce">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z" fill="currentColor" fill-opacity=".1"/>
-            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"
+              fill="currentColor" fill-opacity=".1" />
+            <path
+              d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z" />
           </svg>
         </div>
         <div class="fcard-header">
           <div class="fcard-tag">03 / AGENTIC MCP</div>
           <h3>MCP-powered Sidekick</h3>
-          <p>Groq's Llama 3.3 connects live to SigNoz's MCP server, discovers available tools dynamically, and answers in plain English.</p>
+          <p>Groq's Llama 3.3 connects live to SigNoz's MCP server, discovers available tools dynamically, and answers
+            in plain English.</p>
         </div>
       </div>
       <div class="fcard fx">
         <div class="glow"></div>
         <div class="ico c-blue anim-tilt">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3v18h18"/>
-            <path d="M7 16l4-5 4 3 4-6" stroke-linejoin="round" fill="none"/>
-            <circle cx="7" cy="16" r="1.2" fill="currentColor"/>
-            <circle cx="11" cy="11" r="1.2" fill="currentColor"/>
-            <circle cx="15" cy="14" r="1.2" fill="currentColor"/>
-            <circle cx="19" cy="8" r="1.2" fill="currentColor"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3v18h18" />
+            <path d="M7 16l4-5 4 3 4-6" stroke-linejoin="round" fill="none" />
+            <circle cx="7" cy="16" r="1.2" fill="currentColor" />
+            <circle cx="11" cy="11" r="1.2" fill="currentColor" />
+            <circle cx="15" cy="14" r="1.2" fill="currentColor" />
+            <circle cx="19" cy="8" r="1.2" fill="currentColor" />
           </svg>
         </div>
         <div class="fcard-header">
@@ -2590,30 +2912,34 @@
       <div class="fcard fx" style="transition-delay:.08s">
         <div class="glow"></div>
         <div class="ico c-rose anim-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
           </svg>
         </div>
         <div class="fcard-header">
           <div class="fcard-tag">05 / TELEMETRY</div>
           <h3>Traceable answers</h3>
-          <p>Every Sidekick answer can point back to the exact SigNoz trace or span it used — verifiable, not hallucinated.</p>
+          <p>Every Sidekick answer can point back to the exact SigNoz trace or span it used — verifiable, not
+            hallucinated.</p>
         </div>
       </div>
       <div class="fcard fx" style="transition-delay:.16s">
         <div class="glow"></div>
         <div class="ico c-amber anim-flash">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9" opacity=".15" fill="currentColor" stroke="none"/>
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 8v4M12 16h.01" stroke-width="2.2"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" opacity=".15" fill="currentColor" stroke="none" />
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 8v4M12 16h.01" stroke-width="2.2" />
           </svg>
         </div>
         <div class="fcard-header">
           <div class="fcard-tag">06 / INFERENCE</div>
           <h3>Zero-cost inference</h3>
-          <p>Powered by Groq's LPU inference — near-instant responses, effectively free to run for a demo or a weekend project.</p>
+          <p>Powered by Groq's LPU inference — near-instant responses, effectively free to run for a demo or a weekend
+            project.</p>
         </div>
       </div>
     </div>
