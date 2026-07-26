@@ -86,6 +86,14 @@ ouroboros-ai/
 
 ---
 
+## Architecture
+
+<p align="center">
+  <img src="architecture.png" alt="Ouroboros AI Architecture" width="80%" />
+</p>
+
+---
+
 ## Getting Started
 
 ### Prerequisites
