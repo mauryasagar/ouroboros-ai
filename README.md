@@ -25,7 +25,6 @@ AI agents in production fail silently. When a context overload, slow span, or fa
   <img src="terminal-card.svg" alt="Ouroboros AI Terminal" width="80%" />
 </p>
 
-
 | Step | Component | What happens |
 |------|-----------|--------------|
 | **01 Chaos** | `agent/app_deep.py` | Simulated AI agent runs continuously, triggering context overloads and slow operations |
@@ -67,7 +66,7 @@ ouroboros-ai/
 │       ├── landing.html          # Marketing landing page
 │       └── index.html            # Sidekick chat dashboard
 │
-└── agent/                    # Chaos generator + auto-healer
+└── agent/                        # Chaos generator + auto-healer
     ├── app_deep.py               # Sends chaos traces to SigNoz
     └── auto_healer.py            # Webhook receiver — retries failed ops
 ```
@@ -86,7 +85,7 @@ ouroboros-ai/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ouroboros-ai.git
+git clone https://github.com/mauryasagar/ouroboros-ai.git
 cd ouroboros-ai
 ```
 
@@ -133,7 +132,9 @@ Open **3 terminals**, each from the project root (`ouroboros-ai/`):
 
 **Terminal 1 — Sidekick:**
 ```bash
-cd sidekick && source venv/bin/activate && python sidekick.py
+cd sidekick
+source venv/bin/activate
+python sidekick.py
 ```
 
 You should see:
@@ -144,7 +145,8 @@ INFO:root:Loaded 41 MCP tools
 
 **Terminal 2 — Chaos generator:**
 ```bash
-cd agent && python3 app_deep.py
+cd agent
+python3 app_deep.py
 ```
 
 You should see:
@@ -155,7 +157,8 @@ You should see:
 
 **Terminal 3 — Auto-healer:**
 ```bash
-cd agent && python3 auto_healer.py
+cd agent
+python3 auto_healer.py
 ```
 
 You should see:
@@ -180,7 +183,7 @@ Ask anything about your running agents via the chat dashboard, or directly via c
 ```bash
 curl -s -X POST http://localhost:3001/ask \
   -H "Content-Type: application/json" \
-  -d '{"question":"Which services are currently being monitored in SigNoz?"}' | python3 -m json.tool
+  -d '{"question":"Which services are currently being monitored in SigNoz?"}'
 ```
 
 **Example questions:**
@@ -206,7 +209,7 @@ Trigger the webhook manually to verify the self-healing loop:
 ```bash
 curl -s -X POST http://localhost:5000/webhook \
   -H "Content-Type: application/json" \
-  -d '{"alertname":"ContextOverload","status":"firing","labels":{"alertname":"ContextOverload"}}' | python3 -m json.tool
+  -d '{"alertname":"ContextOverload","status":"firing","labels":{"alertname":"ContextOverload"}}'
 ```
 
 Expected response:
