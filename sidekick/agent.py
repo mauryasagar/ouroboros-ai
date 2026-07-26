@@ -28,7 +28,7 @@ class SidekickAgent:
         self.groq = Groq(api_key=GROQ_API_KEY)
         self.mcp = MCPClient(url="http://localhost:8000/mcp", api_key=SIGNOZ_API_KEY)
         self.tools = self.mcp.list_tools()
-        self.model = "openai/gpt-oss-20b"
+        self.model = "llama-3.1-8b-instant"
         logging.info(f"Loaded {len(self.tools)} MCP tools")
 
     def _format_tools_for_groq(self):
