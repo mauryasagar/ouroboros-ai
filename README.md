@@ -155,7 +155,7 @@ You should see:
 
 **Terminal 3 — Auto-healer:**
 ```bash
-cd otel-demo && python3 auto_healer.py
+cd agent && python3 auto_healer.py
 ```
 
 You should see:
