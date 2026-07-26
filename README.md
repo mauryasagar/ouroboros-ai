@@ -42,7 +42,7 @@ AI agents in production fail silently. When a context overload, slow span, or fa
 |-------|-----------|
 | Observability Backend | SigNoz (self-hosted via Foundry/Docker) |
 | Tracing | OpenTelemetry |
-| AI Reasoning | Groq — `openai/gpt-oss-20b` |
+| AI Reasoning | Groq — `llama-3.1-8b-instant` |
 | Agent ↔ SigNoz Bridge | SigNoz MCP Server (Model Context Protocol) |
 | Web Backend | Flask (Python) |
 | UI | Vanilla HTML/CSS/JS |
@@ -67,7 +67,7 @@ ouroboros-ai/
 │       ├── landing.html          # Marketing landing page
 │       └── index.html            # Sidekick chat dashboard
 │
-└── otel-demo/                    # Chaos generator + auto-healer
+└── agent/                    # Chaos generator + auto-healer
     ├── app_deep.py               # Sends chaos traces to SigNoz
     └── auto_healer.py            # Webhook receiver — retries failed ops
 ```
@@ -122,7 +122,7 @@ cd ..
 ### 5. Install otel-demo dependencies
 
 ```bash
-cd otel-demo
+cd agent
 pip install opentelemetry-sdk opentelemetry-exporter-otlp-proto-grpc flask
 cd ..
 ```
@@ -144,7 +144,7 @@ INFO:root:Loaded 41 MCP tools
 
 **Terminal 2 — Chaos generator:**
 ```bash
-cd otel-demo && python3 app_deep.py
+cd agent && python3 app_deep.py
 ```
 
 You should see:
