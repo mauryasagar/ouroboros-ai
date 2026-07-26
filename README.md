@@ -28,10 +28,10 @@ AI agents in production fail silently. When a context overload, slow span, or fa
 
 | Step | Component | What happens |
 |------|-----------|--------------|
-| **01 Chaos** | `otel-demo/app_deep.py` | Simulated AI agent runs continuously, triggering context overloads and slow operations |
+| **01 Chaos** | `agent/app_deep.py` | Simulated AI agent runs continuously, triggering context overloads and slow operations |
 | **02 Traced** | OpenTelemetry → SigNoz | Every action is instrumented and sent to SigNoz in real time |
 | **03 Alert** | SigNoz Alerts | Failure pattern detected, webhook fired automatically |
-| **04 Heal** | `otel-demo/auto_healer.py` | Webhook received, operation retried with corrected parameters — zero human intervention |
+| **04 Heal** | `agent/auto_healer.py` | Webhook received, operation retried with corrected parameters — zero human intervention |
 | **05 Explain** | Sidekick + Groq + MCP | Ask anything in plain English; Sidekick reads real trace data from SigNoz via MCP and answers |
 
 ---
@@ -119,7 +119,7 @@ pip install -r requirements.txt
 cd ..
 ```
 
-### 5. Install otel-demo dependencies
+### 5. Install agent dependencies
 
 ```bash
 cd agent
