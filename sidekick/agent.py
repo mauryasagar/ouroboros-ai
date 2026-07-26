@@ -32,13 +32,15 @@ class SidekickAgent:
         logging.info(f"Loaded {len(self.tools)} MCP tools")
 
     def _format_tools_for_groq(self):
-        # Whitelist of tools you actually need (reduces token usage)
         allowed_tools = {
             "signoz_list_services",
             "signoz_get_traces",
             "signoz_get_logs",
             "signoz_get_metrics",
             "signoz_get_span",
+            "signoz_get_service_top_operations",
+            "signoz_aggregate_traces",
+            "signoz_search_traces",
         }
         filtered = [t for t in self.tools if t.get("name") in allowed_tools]
         tools_to_use = filtered if filtered else self.tools
