@@ -1,0 +1,106 @@
+<svg width="100%" viewBox="0 0 680 360" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Ouroboros AI terminal card</title>
+  <desc>Terminal showing self-healing observability loop: init, monitor, alert, auto-heal, resolve, audit.</desc>
+  <defs>
+    <filter id="glow-green" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-orange" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-teal" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-red" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-yellow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-btn-green" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .term-bg  { fill: #0f1419; }
+    .term-hdr { fill: #1a1f2e; }
+    .term-border { stroke: #2a2f3d; stroke-width: 0.5; fill: none; }
+    .t  { font-family: 'Roboto Mono','Menlo',monospace; font-size: 13px; fill: #e0e6ed; }
+    .ts { font-family: 'Roboto Mono','Menlo',monospace; font-size: 11px; fill: #8a8f98; }
+    .th { font-family: 'Roboto Mono','Menlo',monospace; font-size: 13px; font-weight: 600; }
+    .c-prompt  { fill: #60a5fa; }
+    .c-accent  { fill: #2dd4bf; }
+    .c-success { fill: #4ade80; }
+    .c-warn    { fill: #f0652a; }
+    .c-title   { fill: #8a8f98; }
+    .dot-green  { fill: #4ade80; filter: url(#glow-green); }
+    .dot-orange { fill: #f0652a; filter: url(#glow-orange); }
+    .dot-teal   { fill: #2dd4bf; filter: url(#glow-teal); }
+    .btn-red    { fill: #ff5f56; filter: url(#glow-red); }
+    .btn-yellow { fill: #ffbd2e; filter: url(#glow-yellow); }
+    .btn-green  { fill: #27c93f; filter: url(#glow-btn-green); }
+    @keyframes pulse-green  { 0%,100%{opacity:1} 50%{opacity:0.5} }
+    @keyframes pulse-orange { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    @keyframes pulse-teal   { 0%,100%{opacity:1} 50%{opacity:0.55} }
+    @keyframes pulse-btn    { 0%,100%{opacity:0.9} 50%{opacity:0.55} }
+    .pulse-green  { animation: pulse-green  1.6s ease-in-out infinite; }
+    .pulse-orange { animation: pulse-orange 0.7s ease-in-out infinite; }
+    .pulse-teal   { animation: pulse-teal   2.0s ease-in-out infinite; }
+    .pulse-btn    { animation: pulse-btn    3.0s ease-in-out infinite; }
+  </style>
+
+  <rect class="term-bg" width="680" height="360" rx="12"/>
+  <rect class="term-border" width="680" height="360" rx="12"/>
+  <rect class="term-hdr" width="680" height="40" rx="12"/>
+  <rect class="term-hdr" x="0" y="20" width="680" height="20"/>
+  <line class="term-border" x1="0" y1="40" x2="680" y2="40"/>
+
+  <circle class="btn-red pulse-btn" cx="20" cy="20" r="6"/>
+  <circle class="btn-yellow pulse-btn" cx="40" cy="20" r="6" style="animation-delay:0.4s"/>
+  <circle class="btn-green pulse-btn" cx="60" cy="20" r="6" style="animation-delay:0.8s"/>
+  <text class="t th c-title" x="340" y="26" text-anchor="middle">ouroboros-ai ~ observability engine</text>
+
+  <text class="t c-prompt" x="28" y="72">$</text>
+  <text class="t c-accent" x="44" y="72">ouroboros</text>
+  <text class="t" x="138" y="72">init --project sidekick</text>
+
+  <text class="t c-success" x="28" y="98">✓</text>
+  <text class="t c-success" x="44" y="98">Agent initialized with self-healing enabled</text>
+
+  <text class="t c-success" x="28" y="122">✓</text>
+  <text class="t c-success" x="44" y="122">SigNoz MCP connected | OTel tracing active</text>
+
+  <text class="t c-prompt" x="28" y="158">$</text>
+  <text class="t c-accent" x="44" y="158">monitor</text>
+  <text class="t" x="120" y="158">--live</text>
+
+  <circle class="dot-green pulse-green" cx="32" cy="182" r="5"/>
+  <text class="t c-accent" x="48" y="186">Monitoring</text>
+  <text class="t" x="138" y="186">3 services... latency: 45ms | traces: 1.2M/s</text>
+
+  <circle class="dot-orange pulse-orange" cx="32" cy="210" r="5"/>
+  <text class="t c-warn" x="48" y="214">ALERT</text>
+  <text class="t" x="104" y="214">context_overload detected in agent#0417</text>
+
+  <circle class="dot-green pulse-green" cx="32" cy="238" r="5"/>
+  <text class="t c-accent" x="48" y="242">Auto-healing</text>
+  <text class="t" x="152" y="242">initiated... retrying with optimized params</text>
+
+  <circle class="dot-teal pulse-teal" cx="32" cy="266" r="5"/>
+  <text class="t c-success" x="48" y="270">RESOLVED</text>
+  <text class="t" x="130" y="270">in 400ms | root cause: token budget exceeded</text>
+
+  <text class="t c-prompt" x="28" y="306">$</text>
+  <text class="t c-accent" x="44" y="306">audit</text>
+  <text class="t" x="100" y="306">--incident #0417</text>
+
+  <text class="t c-success" x="28" y="330">✓</text>
+  <text class="t c-success" x="44" y="330">Complete trace available | Every answer points to source</text>
+</svg>
