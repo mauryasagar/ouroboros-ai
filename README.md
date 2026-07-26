@@ -35,6 +35,19 @@ AI agents in production fail silently. When a context overload, slow span, or fa
 
 ---
 
+## Screenshots
+
+### Landing Page
+<img src="ouroboros-ai/screenshots/landing.png" alt="Landing Page" width="700"/>
+
+### Live Traces in SigNoz
+<img src="ouroboros-ai/screenshots/traces.png" alt="SigNoz Traces" width="700"/>
+
+### AI Sidekick Chat
+<img src="ouroboros-ai/screenshots/sidekick.png" alt="Sidekick Chat" width="700"/>
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
