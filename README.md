@@ -86,7 +86,7 @@ ouroboros-ai/
 
 ---
 
-## Architecture
+## Project Architecture
 
 <p align="center">
   <img src="/screenshots/architecture.png" alt="Ouroboros AI Architecture" width="80%" />
